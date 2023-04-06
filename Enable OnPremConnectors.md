@@ -20,7 +20,7 @@ Microsoft Support enabled inbound connectors in specific cases and they are docu
 
 Nevertheless there are 4 easy steps to speed up this process and avoid to run into a longer discussion with MS support.
 
-1. Rename the connectors "sent email identity" from the preconfigured <guid>.<customerdomain>.<tld> to __seppmail.<customerdomain>.<tld>__
+### 1. Rename the connectors "sent email identity" from the preconfigured *guid.customerdomain.tld* to __seppmail.customerdomain.tld__
 
 To give you a real world example, for a customer contoso.eu which wants to integrate SEPPmail.cloud Germany the sent email identity would be something like
 
@@ -28,15 +28,15 @@ To give you a real world example, for a customer contoso.eu which wants to integ
 
 Save this record somewhere - you will need it later
 
-Login to your Exchange Admin Center (EAC), go to Mailflow ==> Connectors and edit the [SEPPmail] Inbound connector. Go to "Edit sent email identity". Change the name from the automatically set value to: __seppmail.<customerdomain>.<tld>__, so for our example *seppmail.contoso.eu*.
+Login to your Exchange Admin Center (EAC), go to Mailflow == Connectors and edit the [SEPPmail] Inbound connector. Go to "Edit sent email identity". Change the name from the automatically set value to: __seppmail.customerdomain.tld__, so for our example *seppmail.contoso.eu*.
 
-2. Create a new "Accepted Domain" in your Exchange Online Tenant
+### 2. Create a new "Accepted Domain" in your Exchange Online Tenant
 
-Open M365 Admin Center, go to settings ==> domains and add a new domain. As domain name use __the same name as in the inbound connector__, i.e. *seppmail.contoso.eu*. Finish the Add-Domain wizard until the domain is visible in your domain list.
+Open M365 Admin Center, go to settings == domains and add a new domain. As domain name use __the same name as in the inbound connector__, i.e. *seppmail.contoso.eu*. Finish the Add-Domain wizard until the domain is visible in your domain list.
 
 This domain does not have to exist, there will never be any mailflow with this domain, and we will delete it later on.
 
-3. Open a ticket with microsoft support
+### 3. Open a ticket with microsoft support
 
 Contact Microsoft Support and request them to enable the inbound connector. You can adapt and use the following text-template:
 
@@ -46,12 +46,11 @@ This issue is referenced to the Service Health advisory with the  ID EX505293, a
 
 Microsoft should then positively anser your request and enable the connector.
 
-4. Rebuild the Configuration
+### 4. Rebuild the Configuration
 
-Open the Inbound Connector in EAC and set the "sent email identity" back to original value provided with the PowerShell Module <guid>.<customerdomain>.<tld> ( the one you recorded in step 1).
+Open the Inbound Connector in EAC and set the "sent email identity" back to original value provided with the PowerShell Module guid.customerdomain.tld ( the one you recorded in step 1).
 
 
-Mail should now flow through SEPPmail(.cloud). As a cleanup action you may delete the seppmail.<customerdomain>.<tld> from your tenant domain list of leave it as an emotional reference to this thrilling support experience.
+Mail should now flow through SEPPmail(.cloud). As a cleanup action you may delete the *seppmail.customerdomain.tld* from your tenant domain list of leave it as an emotional reference to this thrilling support experience.
 
 If there are any further issues contact us at support@seppmail.de
-
