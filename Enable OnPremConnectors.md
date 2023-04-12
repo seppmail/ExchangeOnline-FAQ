@@ -19,7 +19,8 @@ OnPremise Connectors are a requirement for the integration with SEPPmail.cloud i
 
 Customers and partners, configuring the integration with SEPPmail will use a PowerShell Module (SEPPmail365 or SEPPmail365cloud) to setup rules and connectors. After creating you will get an error message similar to this one:
 
-> |Microsoft.Exchange.Management.Tasks.OrganizationInboundConnectorProhibitedException|Für dieses Dienstangebot können Sie keine eingehenden Connectors in Ihrer Organisation "your-tenant-id" erstellen oder aktualisieren.
+> Microsoft.Exchange.Management.Tasks.OrganizationInboundConnectorProhibitedException
+> Für dieses Dienstangebot können Sie keine eingehenden Connectors in Ihrer Organisation "your-tenant-id" erstellen oder aktualisieren.
 
 The setup of the __inbound connector__ will stay *disabled* and you cannot enable it via the GUI or Powershell.
 
