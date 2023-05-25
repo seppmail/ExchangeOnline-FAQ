@@ -1,31 +1,33 @@
 # Why do i see mails with <somename>.onmicrosoft.com in the maillogs ?
 
-Every M365 Exchange Online tenant has a *.onmicrosoft.com domain. This domain is automatically created during tenant initialization, so its the first domain in a new tenant and also the "Tenant Default Accepted Domain (TDAD)".
+Every M365 Exchange Online tenant has a *.onmicrosoft.com domain. This domain is automatically created during tenant initialization.
+  
+Therefor, it is the first domain in a new tenant and subsequently the intial "Tenant Default Accepted Domain (TDAD)".
 
-Usually, after tenant initialization, customers add their custom domains to the tenant and finally you get a domain-list similar so the one below
+After tenant initialization, customers add their custom domains to the tenant and finally you get a domain-list similar so the one below:
 
 - contosoeu.onmicrosoft.com
 - contoso.eu
 - contoso.de
 
-Customers S-H-O-U-L-D set the TDAD away from the onmicrosoft.com domain, but in many cases this does not happen. 
+Customers S-H-O-U-L-D set the TDAD away from the onmicrosoft.com domain to a custom domain, but in many cases this does not happen. 
 
-Unfortunately, under rare circumstances exchange tenants then send out E-mails with the onmicrosoft.com domain. Typical examples are
+Unfortunately, under rare circumstances exchange tenants then send out E-mails with the *.onmicrosoft.com domain. Typical examples are
 
 - monitoring@contosoeu.onmicrosoft.com
 - printer4711@contosoeu.onmicrosoft.com
 - ... and so on.
 
-Routing those E-Mails is a problem, because onmicrosoft.com is owned by Microsoft and using this mail-domain in a SEPPmail-enabled environment can lead to issues which are described below.
+Routing those E-Mails is a problem, because onmicrosoft.com is owned by Microsoft and using this mail-domain in a SEPPmail-enabled environment can lead to issues which are described below. Please read carefully, if you see E-Mails with *.onmicrosoft.com domains in your maillogs.
 
-## MX Record
+## Some notes about the MX Record
 
 Every onmicrosoft.com domain gets an MX record automatically by Microsoft.
-It´s not possible to view or modify this MX record.
+It´s not possible to view or modify this MX record in the Microsoft Admin Portal or via PowerShell.
 
 ## E-Mail Signatures
 
-As .onmicrosoft.com is not registered in the MPKI, SEPPmail(.cloud) is not able to issue certificates for this e-Mail address and sign E-Mails.
+As .onmicrosoft.com is not registered in the MPKI, SEPPmail(.cloud) is not able to issue certificates for E-Mail addresses and sign E-Mails.
 
 ## Sending E-Mails to external recipients
 
