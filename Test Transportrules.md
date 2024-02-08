@@ -26,7 +26,7 @@ This will generate a report, sent from the postmaster@contoso.eu with informatio
 
 The example shows:
 
-![TransPortRuledDiagnostic](TransPortRuleDiag.png)
+![TransPortRuledDiagnostic](./TransPortRuleDiag.png)
 
 1. It is the Standard diagnostic message
 2. The Transport Rule name which is diagnosed
