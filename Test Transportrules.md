@@ -12,8 +12,7 @@ connect-exchangeOnline
 ```
 
 Be sure you have at least ExchangeOnlineManagement Version 3.0.4 by running with Get-Module:
-![exoversion.png]('https://github.com/seppmail/ExchangeOnline-FAQ/exoversion.png)
-
+![Show Module Version](https://github.com/seppmail/ExchangeOnline-FAQ/assets/22378822/0e752cc8-fbc1-4e23-b3d3-4ab832a72eb1)
 
 ## Option 1: Testing with a default Testmail
 
@@ -26,8 +25,7 @@ Test-Message -Sender 'user.ofthetenant@contoso.eu' -Recipients 'anotheruser.ofth
 This will generate a report, sent from the postmaster@contoso.eu with information on the transport rule behavior.
 
 The example shows:
-
-![TransPortRuledDiagnostic](./TransPortRuleDiag.png)
+![TransPortRuledDiagnostic](https://github.com/seppmail/ExchangeOnline-FAQ/assets/22378822/5540270b-44a5-4353-8506-acc77c934750)
 
 1. It is the Standard diagnostic message
 2. The Transport Rule name which is diagnosed
