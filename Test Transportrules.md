@@ -12,7 +12,8 @@ connect-exchangeOnline
 ```
 
 Be sure you have at least ExchangeOnlineManagement Version 3.0.4 by running with Get-Module:
-![exoversion.png]('./exoversion.png')
+![exoversion.png]('https://github.com/seppmail/ExchangeOnline-FAQ/exoversion.png)
+
 
 ## Option 1: Testing with a default Testmail
 
