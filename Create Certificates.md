@@ -11,9 +11,8 @@ The below article shows how to create those certificates on Windows with PowerSh
 
 ### Create a Self-Sign Certificate on Windows with Powershell
 
-# Create a parameter hashtable for the cert-creation
-
 ```powershell
+# Create a parameter hashtable for the cert-creation
 $certParams = @{
     Subject = "CN=ExoManagementRS"  # Replace with your subject
     CertStoreLocation = "Cert:\CurrentUser\My"
@@ -44,7 +43,7 @@ $cerPath = "./WindowsAppSert.cer"
 
 # Get Thumbprint for APP-Auth
 $thumbprint = $cert.Thumbprint
-Write-Host "Zertifikat Thumbprint: $thumbprint"
+Write-Host "Cert Thumbprint: $thumbprint"
 ```
 
 ### Authenticate to EntraID via APP and certificate on Windows
