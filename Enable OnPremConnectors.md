@@ -17,7 +17,8 @@ Beginning with February 2023, Microsoft blocked the possibility to create new On
 
 Customers and partners, configuring the integration with SEPPmail, will use a PowerShell Module (SEPPmail365 or SEPPmail365cloud) to setup rules and connectors. After creating the connectors with the PS-Module you will get an error message similar to this one:
 
-> |Microsoft.Exchange.Management.Tasks.OrganizationInboundConnectorProhibitedException|Für dieses Dienstangebot können Sie keine eingehenden Connectors in Ihrer Organisation "your-tenant-id" erstellen oder aktualisieren.
+> Microsoft.Exchange.Management.Tasks.OrganizationInboundConnectorProhibitedException
+> Für dieses Dienstangebot können Sie keine eingehenden Connectors in Ihrer Organisation "your-tenant-id" erstellen oder aktualisieren.
 
 The setup of the __inbound connector__ will stay *disabled* and you cannot enable it via the GUI or Powershell.
 
